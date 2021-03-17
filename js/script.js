@@ -53,3 +53,25 @@ for (var i =0; i < games.length; i++) {
     }
 
 }
+
+//* Question 6 *//
+
+var heading = document.querySelector ("h1");
+var button = document.querySelector(".page");
+
+function changeDesign () {
+
+	heading.style.color = "green";
+	heading.style.fontFamily = "impact";
+	
+
+	var body =document.querySelector("body");
+	body.style.backgroundColor = "yellow";
+
+	document.title = "Updated title";
+
+}
+
+button.onclick = changeDesign;
+
+console.dir(document);
