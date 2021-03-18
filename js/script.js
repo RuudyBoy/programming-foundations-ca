@@ -1,4 +1,4 @@
-//* Question 1 *//
+// Question 1
 
 var outOfStock = true;
 
@@ -19,7 +19,7 @@ for (var count = 15; count <=25; count++) {
     
 }
 
-//* Question 3 *//
+// Question 3
 
 var games = [
 	{
@@ -54,7 +54,41 @@ for (var i =0; i < games.length; i++) {
 
 }
 
-//* Question 6 *//
+// Question 4 
+
+function whatIDontLike (vaffel) {
+	if ( typeof vaffel === "string") {
+		console.log("I don`t like vaffel");
+	} else {
+		console.log("Please send in a string");
+	}
+}
+
+whatIDontLike(Boolean);
+
+// Question 5 
+
+function hvemErDummest (dum,dummere) {
+
+	var veldigDum = parseFloat(dum);
+	var ekstremtDum = parseFloat(dummere);
+
+	if (isNaN (veldigDum) || isNaN (ekstremtDum)) {
+		return "Invalid argument(s)"
+	} else {
+		return ekstremtDum - veldigDum;
+	}
+}
+
+var dumt =document.querySelector("div [id]");
+
+dumt.innerHTML = hvemErDummest(10,20);
+
+
+
+
+
+// Question 6 
 
 var heading = document.querySelector ("h1");
 var button = document.querySelector(".page");
@@ -63,7 +97,6 @@ function changeDesign () {
 
 	heading.style.color = "green";
 	heading.style.fontFamily = "impact";
-	
 
 	var body =document.querySelector("body");
 	body.style.backgroundColor = "yellow";
@@ -74,4 +107,4 @@ function changeDesign () {
 
 button.onclick = changeDesign;
 
-console.dir(document);
+
