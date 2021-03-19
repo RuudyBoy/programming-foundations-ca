@@ -108,3 +108,33 @@ function changeDesign () {
 button.onclick = changeDesign;
 
 
+// Question 7
+var price = document.querySelector(".price")
+price.onclick = adding;
+
+var toys = [
+	{
+		name: "Lego",
+		price: 15.6,
+	},
+	{
+		name: "Master of the Universe",
+		price: "28.3",
+	},
+	{
+		name: "Barbie",
+		price: null,
+	},
+	{
+		name: "Mr Potato Head",
+		price: 89.99,
+	},
+];
+
+
+var adding  = document.querySelector("div [id]");
+
+for (var i=0; i < toys.length; i++) {
+	adding.innerHTML += "toys[i].price";
+
+}
