@@ -68,21 +68,21 @@ whatIDontLike(Boolean);
 
 // Question 5 
 
-function hvemErDummest (dum,dummere) {
+function changeToNumbers (change1,change2) {
 
-	var veldigDum = parseFloat(dum);
-	var ekstremtDum = parseFloat(dummere);
+	var firstChange = parseFloat(change1);
+	var secondChange = parseFloat(change2);
 
-	if (isNaN (veldigDum) || isNaN (ekstremtDum)) {
+	if (isNaN (firstChange) || isNaN (secondChange)) {
 		return "Invalid argument(s)"
 	} else {
-		return ekstremtDum - veldigDum;
+		return secondChange - firstChange;
 	}
 }
 
-var dumt =document.querySelector("div [id]");
+var changing =document.querySelector("div [id]");
 
-dumt.innerHTML = hvemErDummest(10,20);
+changing.innerHTML = changeToNumbers (10,20);
 
 
 
@@ -102,15 +102,12 @@ function changeDesign () {
 	body.style.backgroundColor = "yellow";
 
 	document.title = "Updated title";
-
 }
 
 button.onclick = changeDesign;
 
 
 // Question 7
-var price = document.querySelector(".price")
-price.onclick = adding;
 
 var toys = [
 	{
@@ -131,10 +128,25 @@ var toys = [
 	},
 ];
 
+var button = document.querySelector(".price");
 
-var adding  = document.querySelector("div [id]");
+function designChange () {
+var toysContainer =document.querySelector(".bolle")
 
-for (var i=0; i < toys.length; i++) {
-	adding.innerHTML += "toys[i].price";
+for (var i =0; i < toys.length; i++) {
+	var name = toys[i].name;
+	var price = (toys[i].price);
+	var lego = toys[i].price = 15.6;
+	var motu = toys[i].price = 28.3;
+	var potatoHead = toys[i].price = 89.99;
+
+	
+    if (!isNaN(price)) {
+	toysContainer.innerHTML = lego + motu + potatoHead ;
+
+    }
+}
 
 }
+
+button.onclick = designChange;
