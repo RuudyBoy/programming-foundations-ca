@@ -44,12 +44,15 @@ var games = [
 	},
 ];
 
+var gamesContainer = document.querySelector("ul");
+
 for (var i =0; i < games.length; i++) {
     var title= games[i].title;
     var rating= games[i].rating;
+	
 
     if (rating < 3.5) {
-        console.log(title);
+		gamesContainer.innerHTML += "<li>" + games[i].title + " - " + games[i].rating + "</li>";
     }
 
 }
@@ -80,7 +83,7 @@ function changeToNumbers (change1,change2) {
 	}
 }
 
-var changing =document.querySelector("div [id]");
+var changing = document.getElementById("subtraction");
 
 changing.innerHTML = changeToNumbers (10,20);
 
@@ -92,16 +95,22 @@ changing.innerHTML = changeToNumbers (10,20);
 
 var heading = document.querySelector ("h1");
 var button = document.querySelector(".page");
+var ulElement = document.querySelector ("ul");
 
 function changeDesign () {
 
 	heading.style.color = "green";
 	heading.style.fontFamily = "impact";
-
+	heading.innerHTML = "<a href=\#\>" + heading.innerHTML + "</a>";
+	
 	var body =document.querySelector("body");
 	body.style.backgroundColor = "yellow";
 
 	document.title = "Updated title";
+	
+	ulElement.style.padding = "0";
+	ulElement.style.listStyle = "none";
+
 }
 
 button.onclick = changeDesign;
@@ -131,9 +140,9 @@ var toys = [
 var button = document.querySelector(".price");
 
 function designChange () {
-var toysContainer =document.querySelector(".bolle")
+var toysContainer = document.getElementById("total");
 
-for (var i =0; i < toys.length; i++) {
+for (var i = 0; i < toys.length; i++) {
 	var name = toys[i].name;
 	var price = (toys[i].price);
 	var lego = toys[i].price = 15.6;
@@ -142,8 +151,8 @@ for (var i =0; i < toys.length; i++) {
 
 	
     if (!isNaN(price)) {
+	console.log(name);
 	toysContainer.innerHTML = lego + motu + potatoHead ;
-
     }
 }
 
